@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for article in article_lists %}
+    <ul>
+        <li> {{article}} </li>
+    </ul>
+    {% empty %}
+    <p>None</p>
+    {% endfor %}
+
+
+    {% for k, v in map.items %}
+    <ul>
+        <li>The key is {{ k|truncatechars:3}}, and the value is {{ v }}</li>
+    </ul>
+    {% endfor %}
+</body>
+</html>

@@ -1,9 +1,9 @@
 import os
-from app01.views import *
+from . import views
 from django.urls import path
 
 urlpatterns = [
-    path('create/', article_create, name='article_create'),
-    path('detail/<int:article_id>', article_detail, name='article_detail'),
-
+    path('create/', views.article_create, name='article_create'),
+    path('detail/<int:article_id>', views.article_detail, name='article_detail'),
+    path('list/', views.article_list, name='article_list'),
 ]
